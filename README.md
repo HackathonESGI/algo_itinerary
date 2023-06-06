@@ -5,7 +5,7 @@ The Optimal Itinerary Planner is a Python application that leverages the Google 
 
 ## Features
 - Load addresses from a JSON file. 
-- Compute optimal itinerary using Google Maps Directions API. 
+- Compute optimal itinerary using Google Maps Directions API using [Best-first search algo](https://en.wikipedia.org/wiki/Best-first_search). 
 - Manage bookings, including fixed bookings with defined arrival times.
 - Cache Google Maps API results for reuse to optimize API usage.
 - Environment variable management for API keys.
