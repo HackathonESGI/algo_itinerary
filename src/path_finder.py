@@ -6,7 +6,7 @@ from src.helpers.time_converter import hours_to_seconds
 
 
 class PathFinder:
-    def __init__(self, google_api: GoogleMapsApi, bookings: List[Booking], fixed_bookings: List[Booking]):
+    def __init__(self, google_api: GoogleMapsApi, fixed_bookings: List[Booking], bookings: List[Booking]):
         self.google_api = google_api
         self.bookings = bookings
         self.fixed_bookings = sorted(fixed_bookings, key=lambda x: x.arrival_time_seconds)
