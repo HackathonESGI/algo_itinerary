@@ -5,7 +5,7 @@ from src.dataclass.booking import Booking
 from src.dataclass.fixed_recurrent_booking import FixedRecurrentBooking
 from src.dataclass.variable_recurrent_booking import VariableRecurrentBooking
 from src.google_maps_api import GoogleMapsApi
-from src.path_finder.bfs_path_finder import BfsPathFinder
+from src.path_finders.bfs_path_finder import BfsPathFinder
 
 
 class Planner:

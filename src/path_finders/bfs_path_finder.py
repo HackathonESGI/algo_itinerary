@@ -3,7 +3,7 @@ from typing import List
 from src.dataclass.booking import Booking
 from src.google_maps_api import GoogleMapsApi
 from src.helpers.time_converter import hours_to_seconds
-from src.path_finder.base_path_finder import BasePathFinder
+from src.path_finders.base_path_finder import BasePathFinder
 
 
 class BfsPathFinder(BasePathFinder):
