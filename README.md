@@ -1,19 +1,20 @@
-# Optimal Itinerary Planner
+# Python Booking Scheduler
 
-The Optimal Itinerary Planner is a Python application that leverages the Google Maps Directions API to plan optimal travel itineraries. It takes into account various addresses and bookings, sorting them optimally to minimize travel duration. It's especially useful for professionals who need to make multiple visits in a day, such as healthcare practitioners, salespeople, or delivery drivers.
+Python Booking Scheduler
 
+Python Booking Scheduler is a Python application that simulates scheduling and path finding for a range of appointments, generating an itinerary for a practitioner to visit different addresses in a week. This system leverages the Google Maps API for route optimization.
 
 ## Features
-- Load addresses from a JSON file. 
-- Compute optimal itinerary using Google Maps Directions API using [Best-first search algo](https://en.wikipedia.org/wiki/Best-first_search). 
-- Manage bookings, including fixed bookings with defined arrival times.
-- Cache Google Maps API results for reuse to optimize API usage.
-- Environment variable management for API keys.
-
+- Load practitioner and address data from JSON files.
+- Create fake booking scenarios for demonstration purposes.
+- Use the Google Maps API to find optimal paths between bookings.
+- Generate a weekly plan in an easy-to-read tabular format.
+- Identify missed bookings and list them separately.
+- Caches requests to reduce Google Maps API calls.
 
 ## Setup
 Prerequisites:
-- Python 3.7+
+- Python 3.11
 - Google Maps Directions API key
 
 ## Installation
@@ -22,14 +23,11 @@ Prerequisites:
 3. Copy '.env.example' to '.env' and fill in the required google API key.
 4. Run the application using `python main.py`.
 
-## Usage
+## Output
 
-This application will load the practitioner's address and additional addresses from the JSON files, create bookings for these addresses, and then calculate the optimal itinerary for visiting these addresses.
+The output of the program is a weekly schedule with daily routes and a link to a Google Maps itinerary for each day. Missed bookings are displayed at the end of the output, along with the counts of cached and actual API requests to Google Maps API.
 
-The itinerary is printed in the console. Each line represents a booking, displaying the booking id, the address id, the arrival and departure times, and the distance and duration from the previous address.
-
-
-Example output:
+### Example:
 ```
 python main.py
 
