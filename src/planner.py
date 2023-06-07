@@ -5,7 +5,7 @@ from src.dataclass.booking import Booking
 from src.dataclass.fixed_recurrent_booking import FixedRecurrentBooking
 from src.dataclass.variable_recurrent_booking import VariableRecurrentBooking
 from src.google_maps_api import GoogleMapsApi
-from src.path_finder import PathFinder
+from src.path_finder.bfs_path_finder import BfsPathFinder
 
 
 class Planner:
@@ -51,7 +51,7 @@ class Planner:
         fixed_bookings = self._get_bookings_from_fixed_bookings(date) \
                          + self._get_bookings_from_fixed_recurrent_bookings(date)
         bookings = self.missed_booking_addresses + self._get_bookings_from_variable_recurrent_bookings(date)
-        path_finder = PathFinder(self.google_api, fixed_bookings, bookings)
+        path_finder = BfsPathFinder(self.google_api, fixed_bookings, bookings)
         path = path_finder.calculate_path()
         self.missed_booking_addresses = path_finder.bookings
         self.paths[date.weekday()] = path

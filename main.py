@@ -1,6 +1,5 @@
 import datetime
 import random
-from pprint import pprint
 from typing import List, Tuple
 
 from dotenv import load_dotenv
@@ -12,9 +11,7 @@ from src.dataclass.booking import Booking
 from src.dataclass.fixed_recurrent_booking import FixedRecurrentBooking
 from src.dataclass.variable_recurrent_booking import VariableRecurrentBooking
 from src.google_maps_api import GoogleMapsApi
-from src.helpers.link import link
 from src.helpers.time_converter import hours_to_seconds, seconds_to_time
-from src.path_finder import PathFinder
 from src.planner import Planner
 
 
