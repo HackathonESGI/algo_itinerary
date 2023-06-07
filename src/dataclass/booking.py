@@ -5,14 +5,18 @@ from src.dataclass.address import Address
 from src.helpers.time_converter import seconds_to_hours_minutes
 
 
+
 @dataclass
 class Booking:
     id: int
+    date: str
+    recurring: bool
     address: Address
     stay_seconds: int
     arrival_time_seconds: int
     to_reach_kms: Optional[float] = None
     to_reach_seconds: Optional[int] = None
+
 
     def update(self, to_reach_kms: float, to_reach_seconds: int, arrival_time_seconds: int):
         self.to_reach_kms = to_reach_kms

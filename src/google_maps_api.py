@@ -16,6 +16,9 @@ class GoogleMapsApi:
     """
     cache: Dict[str, tuple[Optional[float], Optional[int]]]
 
+    cached_requests= 0
+    api_requests= 0
+
     def __init__(self):
         self.api_key = os.getenv('GOOGLE_MAPS_API_KEY')
         self._load_cache()
@@ -39,8 +42,10 @@ class GoogleMapsApi:
 
         cache_slug = self._get_direction_slug(origin, destination)
         if self._has_cache(cache_slug):
+            self.cached_requests += 1
             return self._get_cache(cache_slug)
-
+        else:
+            self.api_requests += 1
         end_point = 'https://maps.googleapis.com/maps/api/directions/json'
         params = {
             'origin': "{}, {}".format(origin.lat, origin.lng),
