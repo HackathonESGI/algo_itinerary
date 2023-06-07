@@ -9,7 +9,7 @@ from src.dataclass.booking import Booking
 
 @dataclass
 class FixedRecurrentBooking(BaseRecurrentBooking):
-    arrival_time_seconds: int
+    booking_time_seconds: int
     days_of_week: list[int]
 
     def can_book(self, date: datetime.datetime) -> bool:
@@ -30,5 +30,5 @@ class FixedRecurrentBooking(BaseRecurrentBooking):
             self.address,
             date.strftime("%Y-%m-%d"),
             self.stay_seconds,
-            self.arrival_time_seconds
+            self.booking_time_seconds
         )

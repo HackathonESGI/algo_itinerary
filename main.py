@@ -39,7 +39,7 @@ def generate_fake_bookings(praticien: Address, addresses: List[Address]) -> Tupl
     fixed_recurrent_bookings = [start_of_day, end_of_day]
     # set fixed bookings for each day of the next current week at 12:00 to 14:00
     today = datetime.datetime.now().date()
-    start_of_next_week = today + datetime.timedelta(days=(7 - today.weekday() + 1) % 7)  # Get the date of the next week
+    start_of_next_week = today + datetime.timedelta(days=(7 - today.weekday()) % 7)  # Get the date of the next week
     fixed_bookings = []
     for day in range(5):
         booking_date = start_of_next_week + datetime.timedelta(days=day)
@@ -71,9 +71,16 @@ def main():
         print(f"\n\n{days[i]}")
         table = []
         for booking in path:
-            table.append([booking.address.name, seconds_to_time(booking.arrival_time_seconds),
-                          seconds_to_time(booking.departure_time), booking.to_reach_kms, seconds_to_time(booking.to_reach_seconds) if booking.to_reach_seconds else None])
-        print(tabulate(table, headers=['Address', 'Arrival Time', 'Departure Time', 'Kms to reach', 'Time to reach' ]))
+            table.append([
+                booking.address.name,
+                seconds_to_time(booking.arrival_time_seconds) if booking.arrival_time_seconds else None,
+                seconds_to_time(booking.booking_time_seconds) if booking.booking_time_seconds else None,
+                seconds_to_time(booking.departure_time),
+                booking.to_reach_kms,
+                seconds_to_time(booking.to_reach_seconds) if booking.to_reach_seconds else None,
+                seconds_to_time(booking.free_time_seconds) if booking.free_time_seconds  else None,
+            ])
+        print(tabulate(table, headers=['Address', 'Arrival Time','Booking Time', 'Departure Time', 'Kms to reach', 'Time to reach', 'Free Time Before Booking' ]))
         maps_itinerary = "/".join(
             ["{},{}".format(booking.address.lat, booking.address.lng) for booking in path])
         print("\nUrl: https://www.google.com/maps/dir/{}?entry=ttu".format(maps_itinerary))

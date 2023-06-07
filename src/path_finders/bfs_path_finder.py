@@ -14,7 +14,7 @@ class BfsPathFinder(BasePathFinder):
         last_booking = start
         last_booking_departure = last_booking.departure_time
         segment = [start]
-        remaining_time = end.arrival_time_seconds - last_booking_departure
+        remaining_time = end.booking_time_seconds - last_booking_departure
         while self.bookings:
             best_booking = None
             best_duration = float('inf')
@@ -39,17 +39,18 @@ class BfsPathFinder(BasePathFinder):
                 last_booking = best_booking
                 last_booking_departure = last_booking.departure_time
                 self.bookings.remove(best_booking)
-                remaining_time = end.arrival_time_seconds - last_booking_departure
+                remaining_time = end.booking_time_seconds - last_booking_departure
             else:
                 break
             if remaining_time <= hours_to_seconds(0.1):
                 break
-        current_rest_distance, current_rest_duration = self.google_api.get_distance_and_duration(last_booking.address,
+        rest_distance, rest_duration = self.google_api.get_distance_and_duration(last_booking.address,
                                                                                                  end.address)
+        arrival_time = last_booking_departure + rest_duration
         end.update(
-            current_rest_distance,
-            current_rest_duration,
-            last_booking_departure + current_rest_duration
+            rest_distance,
+            rest_duration,
+            arrival_time
         )
         segment.append(end)
         return segment

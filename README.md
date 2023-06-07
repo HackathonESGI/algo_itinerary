@@ -32,108 +32,114 @@ The output of the program is a weekly schedule with daily routes and a link to a
 python main.py
 
 Monday
-Address                                              Arrival Time    Departure Time      Kms to reach  Time to reach
----------------------------------------------------  --------------  ----------------  --------------  ---------------
-2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe  08:00:00        08:00:00
-Aquarium of Guadeloupe, Guadeloupe                   08:10:01        08:40:01                   5.151  00:10:01
-Restaurant le Bordeaux, Guadeloupe                   08:54:30        09:24:30                  14.813  00:14:29
-Caribbean Social Agency, Guadeloupe                  09:27:59        09:57:59                   2.114  00:03:29
-Pharmacie la ROSIERE, Guadeloupe                     10:12:12        10:42:12                   8.819  00:14:13
-Jardin Botanique de Deshaies, Guadeloupe             11:23:50        11:53:50                  31.168  00:41:38
-St. Anne Market, Guadeloupe                          13:09:31        13:39:31                  62.722  01:15:41
-2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe  14:09:22        14:09:22                  21.83   00:29:51
+Address                                              Arrival Time    Booking Time    Departure Time      Kms to reach  Time to reach    Free Time Before Booking
+---------------------------------------------------  --------------  --------------  ----------------  --------------  ---------------  --------------------------
+2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe                  08:00:00        08:00:00
+Sculpture artistique, Guadeloupe                     08:08:11        08:08:11        08:38:11                   4.478  00:08:11
+Aquarium of Guadeloupe, Guadeloupe                   08:39:48        08:39:48        09:09:48                   0.583  00:01:37
+Fort Fleur d'Ã‰pÃ©e, Guadeloupe                      09:15:25        09:15:25        09:45:25                   2.239  00:05:37
+Restaurant Les Colibris, Guadeloupe                  09:55:46        09:55:46        10:25:46                   7.054  00:10:21
+BUNBO, Guadeloupe                                    10:36:10        10:36:10        11:06:10                   7.628  00:10:24
+La Cantina, Guadeloupe                               11:10:14        11:10:14        11:40:14                   1.575  00:04:04
+2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe  11:52:15        12:00:00        14:00:00                   6.26   00:12:01         00:07:45
+Caribbean Social Agency, Guadeloupe                  14:18:24        14:18:24        14:48:24                  14.795  00:18:24
+L Exotic brefort Lamentin guadeloupe , Guadeloupe    15:00:39        15:00:39        15:30:39                   7.599  00:12:15
+KARA tasty experiences, Guadeloupe                   15:37:20        15:37:20        16:07:20                   3.688  00:06:41
+Cascade aux Ecrevisses, Guadeloupe                   16:19:30        16:19:30        16:49:30                   9.71   00:12:10
+2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe  17:12:13        18:00:00        18:00:00                  21.878  00:22:43         00:47:47
 
-Url: https://www.google.com/maps/dir/16.235876,-61.5395697/16.2206519,-61.5230288/16.2413581,-61.612037/16.2295509,-61.6251799/16.2406321,-61.6643745/16.2991842,-61.7976432/16.2242383,-61.3845464/16.235876,-61.5395697?entry=ttu
+Url: https://www.google.com/maps/dir/16.235876,-61.5395697/16.2239845,-61.5261854/16.2206519,-61.5230288/16.2169304,-61.5129364/16.2581168,-61.5221207/16.2391914,-61.5670872/16.2195303,-61.565522/16.235876,-61.5395697/16.2295509,-61.6251799/16.2606482,-61.6504672/16.2364314,-61.6575426/16.1789129,-61.6809609/16.235876,-61.5395697?entry=ttu
 
 
 Tuesday
-Address                                              Arrival Time    Departure Time      Kms to reach  Time to reach
----------------------------------------------------  --------------  ----------------  --------------  ---------------
-2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe  08:00:00        08:00:00
-Sculpture artistique, Guadeloupe                     08:08:11        08:38:11                   4.478  00:08:11
-Fort Fleur d'Ã‰pÃ©e, Guadeloupe                      08:43:36        09:13:36                   2.567  00:05:25
-Restaurant Les Colibris, Guadeloupe                  09:23:57        09:53:57                   7.054  00:10:21
-Le combava, Guadeloupe                               10:01:48        10:31:48                   6.361  00:07:51
-Le Comptoir des Saveurs Jarry, Guadeloupe            10:34:27        11:04:27                   1.639  00:02:39
-BUNBO, Guadeloupe                                    11:05:17        11:35:17                   0.231  00:00:50
-2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe  11:45:30        13:45:30                   5.837  00:10:13
-La Cantina, Guadeloupe                               13:58:50        14:28:50                   7.227  00:13:20
-L Exotic brefort Lamentin guadeloupe , Guadeloupe    14:47:10        15:17:10                  13.893  00:18:20
-KARA tasty experiences, Guadeloupe                   15:23:51        15:53:51                   3.688  00:06:41
-Cascade aux Ecrevisses, Guadeloupe                   16:06:01        16:36:01                   9.71   00:12:10
-Museum costumes and traditions, Guadeloupe           17:05:09        17:35:09                  30.532  00:29:08
-2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe  17:50:33        17:50:33                  10.597  00:15:24
+Address                                                           Arrival Time    Booking Time    Departure Time      Kms to reach  Time to reach    Free Time Before Booking
+----------------------------------------------------------------  --------------  --------------  ----------------  --------------  ---------------  --------------------------
+2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe                               08:00:00        08:00:00
+Le combava, Guadeloupe                                            08:09:28        08:09:28        08:39:28                   5.523  00:09:28
+Le Comptoir des Saveurs Jarry, Guadeloupe                         08:42:07        08:42:07        09:12:07                   1.639  00:02:39
+Restaurant le Bordeaux, Guadeloupe                                09:20:14        09:20:14        09:50:14                   5.159  00:08:07
+Pharmacie la ROSIERE, Guadeloupe                                  10:04:00        10:04:00        10:34:00                  11.381  00:13:46
+ECOMUSEE CREOLEART OF GUADELOUPE AND DREAMS OF VILLA, Guadeloupe  10:53:44        10:53:44        11:23:44                  13.708  00:19:44
+2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe               11:53:15        12:00:00        14:00:00                  24.419  00:29:31         00:06:45
+Museum costumes and traditions, Guadeloupe                        14:15:11        14:15:11        14:45:11                  10.328  00:15:11
+St. Anne Market, Guadeloupe                                       15:07:05        15:07:05        15:37:05                  13.226  00:21:54
+Pointe AllÃ¨gre, Guadeloupe                                       16:38:29        16:38:29        17:08:29                  50.918  01:01:24
+2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe               17:49:33        18:00:00        18:00:00                  31.024  00:41:04         00:10:27
 
-Url: https://www.google.com/maps/dir/16.235876,-61.5395697/16.2239845,-61.5261854/16.2169304,-61.5129364/16.2581168,-61.5221207/16.2405353,-61.5547241/16.2376369,-61.5673074/16.2391914,-61.5670872/16.235876,-61.5395697/16.2195303,-61.565522/16.2606482,-61.6504672/16.2364314,-61.6575426/16.1789129,-61.6809609/16.2097636,-61.4790638/16.235876,-61.5395697?entry=ttu
+Url: https://www.google.com/maps/dir/16.235876,-61.5395697/16.2405353,-61.5547241/16.2376369,-61.5673074/16.2413581,-61.612037/16.2406321,-61.6643745/16.3124734,-61.7054634/16.235876,-61.5395697/16.2097636,-61.4790638/16.2242383,-61.3845464/16.3617922,-61.7438846/16.235876,-61.5395697?entry=ttu
 
 
 Wednesday
-Address                                                           Arrival Time    Departure Time      Kms to reach  Time to reach
-----------------------------------------------------------------  --------------  ----------------  --------------  ---------------
-2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe               08:00:00        08:00:00
-Aquarium of Guadeloupe, Guadeloupe                                08:10:01        08:40:01                   5.151  00:10:01
-Restaurant le Bordeaux, Guadeloupe                                08:54:30        09:24:30                  14.813  00:14:29
-Caribbean Social Agency, Guadeloupe                               09:27:59        09:57:59                   2.114  00:03:29
-Pharmacie la ROSIERE, Guadeloupe                                  10:12:12        10:42:12                   8.819  00:14:13
-2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe               11:02:35        13:02:35                  17.116  00:20:23
-ECOMUSEE CREOLEART OF GUADELOUPE AND DREAMS OF VILLA, Guadeloupe  13:33:23        14:03:23                  25.089  00:30:48
-Pointe AllÃ¨gre, Guadeloupe                                       14:18:20        14:48:20                   9.013  00:14:57
-Plage de Grande Anse, Guadeloupe                                  15:02:57        15:32:57                   8.945  00:14:37
-Jardin Botanique de Deshaies, Guadeloupe                          15:40:56        16:10:56                   3.841  00:07:59
-2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe               17:01:16        17:01:16                  41.805  00:50:20
+Address                                              Arrival Time    Booking Time    Departure Time      Kms to reach  Time to reach    Free Time Before Booking
+---------------------------------------------------  --------------  --------------  ----------------  --------------  ---------------  --------------------------
+2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe                  08:00:00        08:00:00
+Sculpture artistique, Guadeloupe                     08:08:11        08:08:11        08:38:11                   4.478  00:08:11
+Aquarium of Guadeloupe, Guadeloupe                   08:39:48        08:39:48        09:09:48                   0.583  00:01:37
+Fort Fleur d'Ã‰pÃ©e, Guadeloupe                      09:15:25        09:15:25        09:45:25                   2.239  00:05:37
+Restaurant Les Colibris, Guadeloupe                  09:55:46        09:55:46        10:25:46                   7.054  00:10:21
+BUNBO, Guadeloupe                                    10:36:10        10:36:10        11:06:10                   7.628  00:10:24
+La Cantina, Guadeloupe                               11:10:14        11:10:14        11:40:14                   1.575  00:04:04
+2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe  11:52:15        12:00:00        14:00:00                   6.26   00:12:01         00:07:45
+Caribbean Social Agency, Guadeloupe                  14:18:24        14:18:24        14:48:24                  14.795  00:18:24
+L Exotic brefort Lamentin guadeloupe , Guadeloupe    15:00:39        15:00:39        15:30:39                   7.599  00:12:15
+KARA tasty experiences, Guadeloupe                   15:37:20        15:37:20        16:07:20                   3.688  00:06:41
+Cascade aux Ecrevisses, Guadeloupe                   16:19:30        16:19:30        16:49:30                   9.71   00:12:10
+2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe  17:12:13        18:00:00        18:00:00                  21.878  00:22:43         00:47:47
 
-Url: https://www.google.com/maps/dir/16.235876,-61.5395697/16.2206519,-61.5230288/16.2413581,-61.612037/16.2295509,-61.6251799/16.2406321,-61.6643745/16.235876,-61.5395697/16.3124734,-61.7054634/16.3617922,-61.7438846/16.3221395,-61.7886034/16.2991842,-61.7976432/16.235876,-61.5395697?entry=ttu
+Url: https://www.google.com/maps/dir/16.235876,-61.5395697/16.2239845,-61.5261854/16.2206519,-61.5230288/16.2169304,-61.5129364/16.2581168,-61.5221207/16.2391914,-61.5670872/16.2195303,-61.565522/16.235876,-61.5395697/16.2295509,-61.6251799/16.2606482,-61.6504672/16.2364314,-61.6575426/16.1789129,-61.6809609/16.235876,-61.5395697?entry=ttu
 
 
 Thursday
-Address                                              Arrival Time    Departure Time      Kms to reach  Time to reach
----------------------------------------------------  --------------  ----------------  --------------  ---------------
-2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe  08:00:00        08:00:00
-Sculpture artistique, Guadeloupe                     08:08:11        08:38:11                   4.478  00:08:11
-Fort Fleur d'Ã‰pÃ©e, Guadeloupe                      08:43:36        09:13:36                   2.567  00:05:25
-Restaurant Les Colibris, Guadeloupe                  09:23:57        09:53:57                   7.054  00:10:21
-Le combava, Guadeloupe                               10:01:48        10:31:48                   6.361  00:07:51
-Le Comptoir des Saveurs Jarry, Guadeloupe            10:34:27        11:04:27                   1.639  00:02:39
-BUNBO, Guadeloupe                                    11:05:17        11:35:17                   0.231  00:00:50
-2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe  11:45:30        13:45:30                   5.837  00:10:13
-La Cantina, Guadeloupe                               13:58:50        14:28:50                   7.227  00:13:20
-L Exotic brefort Lamentin guadeloupe , Guadeloupe    14:47:10        15:17:10                  13.893  00:18:20
-KARA tasty experiences, Guadeloupe                   15:23:51        15:53:51                   3.688  00:06:41
-Cascade aux Ecrevisses, Guadeloupe                   16:06:01        16:36:01                   9.71   00:12:10
-Museum costumes and traditions, Guadeloupe           17:05:09        17:35:09                  30.532  00:29:08
-2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe  17:50:33        17:50:33                  10.597  00:15:24
+Address                                                           Arrival Time    Booking Time    Departure Time      Kms to reach  Time to reach    Free Time Before Booking
+----------------------------------------------------------------  --------------  --------------  ----------------  --------------  ---------------  --------------------------
+2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe                               08:00:00        08:00:00
+Le combava, Guadeloupe                                            08:09:28        08:09:28        08:39:28                   5.523  00:09:28
+Le Comptoir des Saveurs Jarry, Guadeloupe                         08:42:07        08:42:07        09:12:07                   1.639  00:02:39
+Restaurant le Bordeaux, Guadeloupe                                09:20:14        09:20:14        09:50:14                   5.159  00:08:07
+Pharmacie la ROSIERE, Guadeloupe                                  10:04:00        10:04:00        10:34:00                  11.381  00:13:46
+ECOMUSEE CREOLEART OF GUADELOUPE AND DREAMS OF VILLA, Guadeloupe  10:53:44        10:53:44        11:23:44                  13.708  00:19:44
+2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe               11:53:15        12:00:00        14:00:00                  24.419  00:29:31         00:06:45
+Museum costumes and traditions, Guadeloupe                        14:15:11        14:15:11        14:45:11                  10.328  00:15:11
+St. Anne Market, Guadeloupe                                       15:07:05        15:07:05        15:37:05                  13.226  00:21:54
+Pointe AllÃ¨gre, Guadeloupe                                       16:38:29        16:38:29        17:08:29                  50.918  01:01:24
+2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe               17:49:33        18:00:00        18:00:00                  31.024  00:41:04         00:10:27
 
-Url: https://www.google.com/maps/dir/16.235876,-61.5395697/16.2239845,-61.5261854/16.2169304,-61.5129364/16.2581168,-61.5221207/16.2405353,-61.5547241/16.2376369,-61.5673074/16.2391914,-61.5670872/16.235876,-61.5395697/16.2195303,-61.565522/16.2606482,-61.6504672/16.2364314,-61.6575426/16.1789129,-61.6809609/16.2097636,-61.4790638/16.235876,-61.5395697?entry=ttu
+Url: https://www.google.com/maps/dir/16.235876,-61.5395697/16.2405353,-61.5547241/16.2376369,-61.5673074/16.2413581,-61.612037/16.2406321,-61.6643745/16.3124734,-61.7054634/16.235876,-61.5395697/16.2097636,-61.4790638/16.2242383,-61.3845464/16.3617922,-61.7438846/16.235876,-61.5395697?entry=ttu
 
 
 Friday
-Address                                                           Arrival Time    Departure Time      Kms to reach  Time to reach
-----------------------------------------------------------------  --------------  ----------------  --------------  ---------------
-2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe               08:00:00        08:00:00
-Aquarium of Guadeloupe, Guadeloupe                                08:10:01        08:40:01                   5.151  00:10:01
-Restaurant le Bordeaux, Guadeloupe                                08:54:30        09:24:30                  14.813  00:14:29
-Caribbean Social Agency, Guadeloupe                               09:27:59        09:57:59                   2.114  00:03:29
-Pharmacie la ROSIERE, Guadeloupe                                  10:12:12        10:42:12                   8.819  00:14:13
-2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe               11:02:35        13:02:35                  17.116  00:20:23
-ECOMUSEE CREOLEART OF GUADELOUPE AND DREAMS OF VILLA, Guadeloupe  13:33:23        14:03:23                  25.089  00:30:48
-Pointe AllÃ¨gre, Guadeloupe                                       14:18:20        14:48:20                   9.013  00:14:57
-Plage de Grande Anse, Guadeloupe                                  15:02:57        15:32:57                   8.945  00:14:37
-Jardin Botanique de Deshaies, Guadeloupe                          15:40:56        16:10:56                   3.841  00:07:59
-2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe               17:01:16        17:01:16                  41.805  00:50:20
+Address                                              Arrival Time    Booking Time    Departure Time      Kms to reach  Time to reach    Free Time Before Booking
+---------------------------------------------------  --------------  --------------  ----------------  --------------  ---------------  --------------------------
+2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe                  08:00:00        08:00:00
+Sculpture artistique, Guadeloupe                     08:08:11        08:08:11        08:38:11                   4.478  00:08:11
+Aquarium of Guadeloupe, Guadeloupe                   08:39:48        08:39:48        09:09:48                   0.583  00:01:37
+Fort Fleur d'Ã‰pÃ©e, Guadeloupe                      09:15:25        09:15:25        09:45:25                   2.239  00:05:37
+Restaurant Les Colibris, Guadeloupe                  09:55:46        09:55:46        10:25:46                   7.054  00:10:21
+BUNBO, Guadeloupe                                    10:36:10        10:36:10        11:06:10                   7.628  00:10:24
+La Cantina, Guadeloupe                               11:10:14        11:10:14        11:40:14                   1.575  00:04:04
+2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe  11:52:15        12:00:00        14:00:00                   6.26   00:12:01         00:07:45
+Caribbean Social Agency, Guadeloupe                  14:18:24        14:18:24        14:48:24                  14.795  00:18:24
+L Exotic brefort Lamentin guadeloupe , Guadeloupe    15:00:39        15:00:39        15:30:39                   7.599  00:12:15
+KARA tasty experiences, Guadeloupe                   15:37:20        15:37:20        16:07:20                   3.688  00:06:41
+Cascade aux Ecrevisses, Guadeloupe                   16:19:30        16:19:30        16:49:30                   9.71   00:12:10
+2 Rue Schoelcher, Pointe-Ã -Pitre 97110, Guadeloupe  17:12:13        18:00:00        18:00:00                  21.878  00:22:43         00:47:47
 
-Url: https://www.google.com/maps/dir/16.235876,-61.5395697/16.2206519,-61.5230288/16.2413581,-61.612037/16.2295509,-61.6251799/16.2406321,-61.6643745/16.235876,-61.5395697/16.3124734,-61.7054634/16.3617922,-61.7438846/16.3221395,-61.7886034/16.2991842,-61.7976432/16.235876,-61.5395697?entry=ttu
+Url: https://www.google.com/maps/dir/16.235876,-61.5395697/16.2239845,-61.5261854/16.2206519,-61.5230288/16.2169304,-61.5129364/16.2581168,-61.5221207/16.2391914,-61.5670872/16.2195303,-61.565522/16.235876,-61.5395697/16.2295509,-61.6251799/16.2606482,-61.6504672/16.2364314,-61.6575426/16.1789129,-61.6809609/16.235876,-61.5395697?entry=ttu
 
 
 Missed bookings:
 Missed Address
----------------------------
+----------------------------------------
 Fort DelgrÃ¨s, Guadeloupe
-St. Anne Market, Guadeloupe
+Jardin Botanique de Deshaies, Guadeloupe
+Plage de Grande Anse, Guadeloupe
 Fort DelgrÃ¨s, Guadeloupe
-St. Anne Market, Guadeloupe
-Cached requests: 875
-Api requests: 0
+Jardin Botanique de Deshaies, Guadeloupe
+Plage de Grande Anse, Guadeloupe
+Fort DelgrÃ¨s, Guadeloupe
+Pointe AllÃ¨gre, Guadeloupe
 
-Process finished with exit code 0
+Cached requests: 1060
+Api requests: 0
 
 ```

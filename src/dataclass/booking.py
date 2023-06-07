@@ -10,26 +10,36 @@ class Booking:
     address: Address
     stay_seconds: int
     date: str
-
-    arrival_time_seconds: Optional[int] = None
+    booking_time_seconds: Optional[int] = None
     to_reach_kms: Optional[float] = None
     to_reach_seconds: Optional[int] = None
+    arrival_time_seconds: Optional[int] = None
 
     def update(self, to_reach_kms: float, to_reach_seconds: int, arrival_time_seconds: int):
         self.to_reach_kms = to_reach_kms
         self.to_reach_seconds = to_reach_seconds
         self.arrival_time_seconds = arrival_time_seconds
+        if self.booking_time_seconds is None:
+            self.booking_time_seconds = arrival_time_seconds
 
     @property
     def departure_time(self):
-        return self.arrival_time_seconds + self.stay_seconds if self.stay_seconds is not None else 0
+        return self.booking_time_seconds + self.stay_seconds\
+            if self.stay_seconds is not None and self.booking_time_seconds is not None\
+            else 0
+
+    @property
+    def free_time_seconds(self):
+        return self.booking_time_seconds - self.arrival_time_seconds\
+            if self.arrival_time_seconds is not None and self.booking_time_seconds is not None\
+            else 0
 
     @classmethod
     def from_address(cls,
                      address: Address,
                      date: str,
                      stay_seconds: int,
-                     arrival_time_seconds: Optional[int] = None,
+                     booking_time_seconds: Optional[int] = None,
                      to_reach_kms: Optional[float] = None,
                      to_reach_seconds: Optional[int] = None
                      ):
@@ -37,7 +47,7 @@ class Booking:
             address,
             stay_seconds,
             date,
-            arrival_time_seconds,
+            booking_time_seconds,
             to_reach_kms,
             to_reach_seconds
         )
